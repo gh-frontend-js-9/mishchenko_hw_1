@@ -1,0 +1,17 @@
+body{
+	width: 37%;
+	margin: auto;
+}
+
+p img{
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+header, figure{
+	text-align: center;
+}
+
+div{
+	margin: 20px 0 0;
+}
