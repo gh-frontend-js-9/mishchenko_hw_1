@@ -1,0 +1,28 @@
+body{
+	width: 50%;
+	margin: auto;
+}
+
+label{
+	cursor: pointer;
+}
+
+fieldset{
+	margin-bottom: 20px;
+}
+
+main{
+	margin: 0 0 40px;
+}
+
+legend{
+	margin: 0 0 20px;
+}
+
+div{
+	margin: 0 0 20px;
+}
+
+textarea{
+	display: block;
+}

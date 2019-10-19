@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" type='image/x-icon' href="img/favicon.ico">
+	<title>Form</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Урок "Формы": теги и их атрибуты.</h1>
+				<h2>Расскажите немного о себе...</h2>
+					<p>Попробуйте создать аналогичную форму. Для целей демонстрации вполне подойдут и вымышленные.</p>
+		</header>
+		<article>
+			<form action="#" name="form" autocomplete="on">
+				<fieldset>
+					<legend>
+						<strong>Коротко о себе</strong>
+					</legend>
+						<div>
+							<label for="name">Имя:</label>
+								<input id="name" type="text" name="name" pattern="[A-Za-z]{3,}" maxlength="15" minlength="2" required autofocus tabindex="1">
+						</div>
+						<div>
+							<label for="surname">Фамилия:</label>
+								<input id="surname" type="text" name="surname" pattern="[A-Za-z]{3,}" maxlength="15" minlength="2" required tabindex="2">
+						</div>
+						<div>
+							<label>Пол:</label>
+								<input id="man" type="radio" name="gender" required tabindex="3"> 
+									<label for="man">мужской</label>
+								<input id="woman" type="radio" name="gender" required tabindex="3"> 
+									<label for="woman">женский</label>
+						</div>
+						<div>
+							<label for="age">Возраст:
+								<input id="age" type="number" name="age" min="1" max="100" required tabindex="4">
+								лет
+							</label>
+						</div>
+				</fieldset>
+				<fieldset>
+					<legend>
+						<strong>Подробнее о себе</strong>
+					</legend>
+					<div>
+						<input id="youngman" type="radio" name="period" required checked tabindex="5">
+							<label for="youngman">Молодой человек</label><br>
+						<input id="girl" type="radio" name="period" required tabindex="5"> 
+							<label for="girl">Девушка</label>
+					</div>
+					<div>
+						<input id="date" type="date" name="birthday" tabindex="6" required>
+							<label for="date">Дата рождения</label><br>
+						<select name="familystatus" id="familystatus" tabindex="7">
+							<option value="married">женат/замужем</option>
+							<option value="notmarried">не женат/не замужем</option>
+						</select>
+							<label for="familystatus">Семейное положение</label><br/>
+						<select name="socialstatus" id="socialstatus" tabindex="8">
+							<option value="student">учусь</option>
+							<option value="working">работаю</option>
+							<option value="unemployed">безработный</option>
+						</select>
+							<label for="socialstatus">Социальный статус</label><br/>
+						<input id="location" type="text" pattern="[A-Za-zА-Яа-яЁё]{3,}" required tabindex="9"> 
+							<label for="location">Местожительство</label>
+					</div>
+					<div>
+						<div>
+							<strong>Что вы обычно делаете на выходных:</strong>
+						</div>
+							<input id="sleep" type="checkbox" name="sleep" tabindex="10">
+								<label for="sleep">Сплю</label><br/>
+							<input id="walk" type="checkbox" name="walk" tabindex="11">
+								<label for="walk">Гуляю с друзьями</label><br/>
+							<input id="fishing" type="checkbox" name="fishing" tabindex="12">
+								<label for="fishing">Хожу на рыбалку</label><br/>
+							<input id="playinggames" type="checkbox" name="playinggames" tabindex="13">
+								<label for="playinggames">Играю в игры</label>
+					</div>
+					<div>
+						<div>
+							<strong>Как часто вы читаете книги ?</strong>
+						</div>
+							<select id="books" name="books" tabindex="14">
+								<option value="selected" selected disabled>Выберите один из вариантов:</option>
+								<option value="often">часто</option>
+								<option value="infrequently">не часто</option>
+								<option value="seldom">редко</option>
+							</select>
+					</div> 
+					<div>
+						<div>
+							<strong>Сколько книг вы прочитали за свою жизнь:</strong>
+						</div>
+							<input id="verylittle" type="radio" name="count" tabindex="15">
+								<label for="verylittle">0-10</label><br/>
+							<input id="little" type="radio" name="count" tabindex="15"> 
+								<label for="little">11-20</label><br/>
+							<input id="medium" type="radio" name="count" tabindex="15">
+								<label for="medium">21-50</label><br/>
+							<input id="many" type="radio" name="count" tabindex="15"> 
+								<label for="many">50+</label>
+					</div>
+					<div>
+						<label for="comments">
+							<strong>Ваши коментарии:</strong>
+						</label>
+							<textarea name="comments" id="comments" cols="60" rows="10" tabindex="16"></textarea>
+					</div>
+					<div>
+						<select id="position" size="3" name="positions" tabindex="17">
+							<option value="first_position">Первая позиция</option>
+							<option value="second_position">Вторая позиция</option>
+							<option value="third_position">Третья позиция</option>
+						</select>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>
+						<strong>И в заключении</strong>
+					</legend>
+					<div>
+						<input type="text" value="Это поле было введено до вас" size="30" disabled>
+					</div>
+					<div>
+						<label for="email"><strong>Email:</strong></label><br/>
+							<input id="email" type="email" name="email" size="30" required tabindex="18">
+					</div>
+					<div>
+						<strong>Хотите подписаться на самую модную рассылку спама ?</strong><br/>
+							<em>Выберите категории</em>
+					</div>
+						<div>
+							<input id="equipment" type="checkbox" name="equipment" tabindex="19">
+								<label for="equipment">Оборудование</label><br/>
+							<input id="cooking" type="checkbox" name="cooking" tabindex="20">
+								<label for="cooking">Как приготовить обеды</label><br/>
+							<input id="azino777" type="checkbox" name="azino777" tabindex="21">
+								<label for="azino777">Заработай милион за два дня!</label>
+						</div>
+						<div>
+							<strong>На сколько сложная задача:</strong>
+						</div>
+						<div>
+							<input id="easy" type="radio" name="complexity" checked tabindex="22">
+								<label for="easy">Совсем нет</label><br/>
+							<input id="medium" type="radio" name="complexity" tabindex="22"> 
+								<label for="medium">Так себе</label><br/>
+							<input id="difficult" type="radio" name="complexity" tabindex="22">
+								<label for="difficult">Ели справились</label>
+						</div>
+				</fieldset>
+				<button type="submit">Отправить</button>
+			</form>
+		</article>
+	</main>
+</body>
+</html>
